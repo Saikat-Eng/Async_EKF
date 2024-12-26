@@ -17,7 +17,7 @@ for ii=1:N
     fuseaccel(filt, sensorData.Accelerometer(ii,:), measNoise.AccelerometerNoise);
     fusegyro(filt, sensorData.Gyroscope(ii,:), measNoise.GyroscopeNoise);
 
-    if(ii/10)==1
+    if(mod(ii,10)==0)
         fusemag(filt, sensorData.Magnetometer(ii,:), measNoise.MagnetometerNoise);
     end
      
